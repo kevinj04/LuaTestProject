@@ -10,6 +10,11 @@
 // Import the interfaces
 #import "HelloWorldLayer.h"
 
+#import "KKConfig.h"
+#import "kkLuaInitScript.h"
+#import "KKLua.h"
+
+
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
 
@@ -44,6 +49,17 @@
 		// position the label on the center of the screen
 		label.position =  ccp( size.width /2 , size.height/2 );
 		
+        wax_setup();
+        
+        [KKLua doString:kLuaInitScript];
+        [KKLua doString:kLuaInitScriptPlatformSpecific];
+        
+        [KKConfig loadConfigLua];
+        
+        NSDictionary *dict = [KKConfig dictionaryForKey:@"testEntry"];
+        
+        NSLog(@"Dict: %@", dict);
+        
 		// add the label as a child to this Layer
 		[self addChild: label];
 	}

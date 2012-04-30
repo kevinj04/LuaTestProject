@@ -124,7 +124,26 @@
 		0ABCCAC8154F225800CE5CC7 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABCCAC7154F225800CE5CC7 /* RootViewController.m */; };
 		0ABCCACB154F225800CE5CC7 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABCCACA154F225800CE5CC7 /* HelloWorldLayer.m */; };
 		0ABCCAD5154F22B200CE5CC7 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0ABCCAD4154F22B200CE5CC7 /* Config.xcconfig */; };
+		0ABCCAE6154F25AB00CE5CC7 /* config.lua in Resources */ = {isa = PBXBuildFile; fileRef = 0ABCCAE5154F25AB00CE5CC7 /* config.lua */; };
+		0ABCCB18154F30DC00CE5CC7 /* libLuaLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABCCAE1154F24C900CE5CC7 /* libLuaLib.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0ABCCAE0154F24C900CE5CC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0ABCCAD9154F24C900CE5CC7 /* LuaLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0ABCC7DF154F1CBA00CE5CC7;
+			remoteInfo = LuaLib;
+		};
+		0ABCCB0F154F2E2F00CE5CC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0ABCCAD9154F24C900CE5CC7 /* LuaLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ABCC7DE154F1CBA00CE5CC7;
+			remoteInfo = LuaLib;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0ABCC95A154F225500CE5CC7 /* LuaTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuaTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -365,6 +384,8 @@
 		0ABCCACA154F225800CE5CC7 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		0ABCCACC154F225800CE5CC7 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		0ABCCAD4154F22B200CE5CC7 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		0ABCCAD9154F24C900CE5CC7 /* LuaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LuaLib.xcodeproj; path = submodules/lua/LuaLib.xcodeproj; sourceTree = SOURCE_ROOT; };
+		0ABCCAE5154F25AB00CE5CC7 /* config.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.lua; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,6 +393,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ABCCB18154F30DC00CE5CC7 /* libLuaLib.a in Frameworks */,
 				0ABCC95F154F225500CE5CC7 /* QuartzCore.framework in Frameworks */,
 				0ABCC961154F225500CE5CC7 /* OpenGLES.framework in Frameworks */,
 				0ABCC963154F225500CE5CC7 /* OpenAL.framework in Frameworks */,
@@ -450,6 +472,7 @@
 				0ABCC97E154F225500CE5CC7 /* Icon@2x.png */,
 				0ABCC980154F225500CE5CC7 /* Info.plist */,
 				0ABCC981154F225500CE5CC7 /* iTunesArtwork */,
+				0ABCCAE5154F25AB00CE5CC7 /* config.lua */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -778,8 +801,17 @@
 		0ABCCAD3154F229600CE5CC7 /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
+				0ABCCAD9154F24C900CE5CC7 /* LuaLib.xcodeproj */,
 			);
 			name = Submodules;
+			sourceTree = "<group>";
+		};
+		0ABCCADA154F24C900CE5CC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0ABCCAE1154F24C900CE5CC7 /* libLuaLib.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -796,6 +828,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				0ABCCB10154F2E2F00CE5CC7 /* PBXTargetDependency */,
 			);
 			name = LuaTestProject;
 			productName = LuaTestProject;
@@ -820,12 +853,28 @@
 			mainGroup = 0ABCC94F154F225400CE5CC7;
 			productRefGroup = 0ABCC95B154F225500CE5CC7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0ABCCADA154F24C900CE5CC7 /* Products */;
+					ProjectRef = 0ABCCAD9154F24C900CE5CC7 /* LuaLib.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0ABCC959154F225400CE5CC7 /* LuaTestProject */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0ABCCAE1154F24C900CE5CC7 /* libLuaLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libLuaLib.a;
+			remoteRef = 0ABCCAE0154F24C900CE5CC7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0ABCC958154F225400CE5CC7 /* Resources */ = {
@@ -842,6 +891,7 @@
 				0ABCC97F154F225500CE5CC7 /* Icon@2x.png in Resources */,
 				0ABCC982154F225500CE5CC7 /* iTunesArtwork in Resources */,
 				0ABCCAD5154F22B200CE5CC7 /* Config.xcconfig in Resources */,
+				0ABCCAE6154F25AB00CE5CC7 /* config.lua in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -956,6 +1006,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0ABCCB10154F2E2F00CE5CC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LuaLib;
+			targetProxy = 0ABCCB0F154F2E2F00CE5CC7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		0ABCCACD154F225800CE5CC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1002,6 +1060,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = LuaTestProject/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				HEADER_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/../LuaLib",
+					"/Users/Kevin/Library/Developer/Xcode/DerivedData/LuaTestProject-dzjlwgggelvwgxdbkaviqwqwzbyp/Build/Products/Debug-iphonesimulator",
+					"$(BUILT_PRODUCTS_DIR)/../../LuaLib",
+				);
 				INFOPLIST_FILE = LuaTestProject/Resources/Info.plist;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1017,6 +1080,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = LuaTestProject/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				HEADER_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/../LuaLib",
+					"/Users/Kevin/Library/Developer/Xcode/DerivedData/LuaTestProject-dzjlwgggelvwgxdbkaviqwqwzbyp/Build/Products/Debug-iphonesimulator",
+					"$(BUILT_PRODUCTS_DIR)/../../LuaLib",
+				);
 				INFOPLIST_FILE = LuaTestProject/Resources/Info.plist;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
