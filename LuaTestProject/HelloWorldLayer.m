@@ -9,6 +9,7 @@
 
 // Import the interfaces
 #import "HelloWorldLayer.h"
+#import <UIKit/UIKit.h>
 
 #import "KKConfig.h"
 #import "kkLuaInitScript.h"
@@ -57,8 +58,10 @@
         [KKConfig loadConfigLua];
         
         NSDictionary *dict = [KKConfig dictionaryForKey:@"testEntry"];
-        
+        [KKConfig selectKeyPath:@"testEntry.subObject.subObject2"];
+        CGRect r = [KKConfig rectForKey:@"aRect"];
         NSLog(@"Dict: %@", dict);
+        NSLog(@"Rect: %@", NSStringFromCGRect(r));
         
 		// add the label as a child to this Layer
 		[self addChild: label];

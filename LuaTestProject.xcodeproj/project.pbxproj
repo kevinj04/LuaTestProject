@@ -126,6 +126,8 @@
 		0ABCCAD5154F22B200CE5CC7 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0ABCCAD4154F22B200CE5CC7 /* Config.xcconfig */; };
 		0ABCCAE6154F25AB00CE5CC7 /* config.lua in Resources */ = {isa = PBXBuildFile; fileRef = 0ABCCAE5154F25AB00CE5CC7 /* config.lua */; };
 		0ABCCB18154F30DC00CE5CC7 /* libLuaLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABCCAE1154F24C900CE5CC7 /* libLuaLib.a */; };
+		0ABCCB25154F3F1300CE5CC7 /* RectScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABCCB24154F3F1200CE5CC7 /* RectScene.m */; };
+		0ABCCB28154F3F5900CE5CC7 /* MagicRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABCCB27154F3F5900CE5CC7 /* MagicRect.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -386,6 +388,10 @@
 		0ABCCAD4154F22B200CE5CC7 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		0ABCCAD9154F24C900CE5CC7 /* LuaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LuaLib.xcodeproj; path = submodules/lua/LuaLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		0ABCCAE5154F25AB00CE5CC7 /* config.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.lua; sourceTree = "<group>"; };
+		0ABCCB23154F3F1200CE5CC7 /* RectScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectScene.h; sourceTree = "<group>"; };
+		0ABCCB24154F3F1200CE5CC7 /* RectScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RectScene.m; sourceTree = "<group>"; };
+		0ABCCB26154F3F5900CE5CC7 /* MagicRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicRect.h; sourceTree = "<group>"; };
+		0ABCCB27154F3F5900CE5CC7 /* MagicRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicRect.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -452,6 +458,10 @@
 				0ABCCAC9154F225800CE5CC7 /* HelloWorldLayer.h */,
 				0ABCCACA154F225800CE5CC7 /* HelloWorldLayer.m */,
 				0ABCCACC154F225800CE5CC7 /* GameConfig.h */,
+				0ABCCB23154F3F1200CE5CC7 /* RectScene.h */,
+				0ABCCB24154F3F1200CE5CC7 /* RectScene.m */,
+				0ABCCB26154F3F5900CE5CC7 /* MagicRect.h */,
+				0ABCCB27154F3F5900CE5CC7 /* MagicRect.m */,
 				0ABCC96F154F225500CE5CC7 /* Resources */,
 				0ABCC983154F225500CE5CC7 /* libs */,
 				0ABCCABF154F225800CE5CC7 /* Supporting Files */,
@@ -1001,6 +1011,8 @@
 				0ABCCAC5154F225800CE5CC7 /* AppDelegate.m in Sources */,
 				0ABCCAC8154F225800CE5CC7 /* RootViewController.m in Sources */,
 				0ABCCACB154F225800CE5CC7 /* HelloWorldLayer.m in Sources */,
+				0ABCCB25154F3F1300CE5CC7 /* RectScene.m in Sources */,
+				0ABCCB28154F3F5900CE5CC7 /* MagicRect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1053,6 +1065,7 @@
 		};
 		0ABCCAD0154F225800CE5CC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ABCCAD4154F22B200CE5CC7 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
@@ -1074,6 +1087,7 @@
 		};
 		0ABCCAD1154F225800CE5CC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ABCCAD4154F22B200CE5CC7 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
@@ -1112,6 +1126,7 @@
 				0ABCCAD1154F225800CE5CC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
